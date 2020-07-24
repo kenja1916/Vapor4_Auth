@@ -40,6 +40,4 @@ func routes(_ app: Application) throws {
         return User.find(user.id, on: req.db)
             .unwrap(or: Abort(.notFound))
     }
-
-    try app.register(collection: TodoController())
 }
